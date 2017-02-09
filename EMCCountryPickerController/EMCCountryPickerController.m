@@ -335,7 +335,12 @@ static const CGFloat kEMCCountryCellControllerMinCellHeight = 25;
     {
         cell.accessoryType = UITableViewCellAccessoryNone;
     }
-    
+
+    if (_labelFont)
+    {
+        cell.textLabel.font = _labelFont;
+    }
+
     return cell;
 }
 

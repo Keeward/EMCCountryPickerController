@@ -23,5 +23,6 @@
 @property CGFloat flagSize;
 @property UIColor *flagBorderColor;
 @property CGFloat flagBorderWidth;
+@property UIFont *labelFont;
 
 @end
