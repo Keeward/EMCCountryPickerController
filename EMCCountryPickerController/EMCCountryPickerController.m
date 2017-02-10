@@ -14,7 +14,7 @@
 #error This class requires ARC support to be enabled.
 #endif
 
-static const CGFloat kEMCCountryCellControllerMinCellHeight = 25;
+static const CGFloat kEMCCountryCellControllerMinCellHeight = 50;
 
 @interface EMCCountryPickerController ()
 
@@ -182,6 +182,7 @@ static const CGFloat kEMCCountryCellControllerMinCellHeight = 25;
     [countryTable setTranslatesAutoresizingMaskIntoConstraints:NO];
     countryTable.dataSource = self;
     countryTable.delegate = self;
+    countryTable.rowHeight = kEMCCountryCellControllerMinCellHeight;
     [countryTable registerClass:[UITableViewCell class] forCellReuseIdentifier:@"identifier"];
     
     searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, [rootView frame].size.width, 0)];
